@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - IndiVar</title>
+    
+    <!-- Cache Control Meta Tags -->
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Prevent FOUC by initially hiding interactive content -->
+    <style>
+        .auth-protected-content {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .auth-protected-content.auth-ready {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .content-loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        /* Hide auth UI until JavaScript determines correct state */
+        .auth-ui-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .auth-ui-ready {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="/" class="logo-link">IndiVar</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/articles" class="nav-link">Articles</a></li>
+                    <li><a href="/tests" class="nav-link">Tests</a></li>
+                    <li><a href="/chatbots" class="nav-link">Chatbots</a></li>
+                    <li class="user-menu auth-ui-hidden" id="user-menu" style="display: none;">
+                        <span class="username" id="username-display"></span>
+                        <button class="logout-btn" id="logout-btn">Logout</button>
+                    </li>
+                    <li class="auth-buttons auth-ui-hidden">
+                        <a href="#" class="btn btn-primary" id="login-link">Login</a>
+                        <a href="#" class="btn btn-secondary" id="register-link">Register</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sticky Notes Containers -->
+    <div class="sticky-notes-container left-sticky-notes" id="left-sticky-notes">
+        <!-- Left sticky notes will be added here -->
+    </div>
+    <div class="sticky-notes-container right-sticky-notes" id="right-sticky-notes">
+        <!-- Right sticky notes will be added here -->
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <!-- Content Loading State -->
+            <div class="content-loading" id="content-loading">
+                <div>
+                    <div class="spinner" style="margin: 0 auto 1rem; width: 24px; height: 24px;"></div>
+                    <p>Page loading...</p>
+                </div>
+            </div>
+            
+            <div class="article-container auth-protected-content">
+                <div class="article-header">
+                    <nav class="breadcrumb">
+                        <a href="/" class="breadcrumb-link">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <a href="/articles" class="breadcrumb-link">Articles</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-current">Article</span>
+                    </nav>
+                    
+                    <div class="article-meta" id="article-meta">
+                        <!-- Article metadata will be loaded here -->
+                    </div>
+                </div>
+
+                <article class="article-content" id="article-content">
+                    <!-- Article content will be loaded here -->
+                </article>
+
+                <!-- User Interaction Section (only visible when logged in) -->
+                <div class="user-interaction-section" id="user-interaction-section" style="display: none;">
+                    <div class="read-status-section">
+                        <label class="read-status-toggle">
+                            <input type="checkbox" id="read-status-checkbox">
+                            <span class="read-status-label">Mark as read</span>
+                            <span class="read-status-indicator"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="notes-section">
+                        <h3 class="notes-title">My Notes</h3>
+                        <textarea 
+                            id="article-notes" 
+                            class="notes-textarea" 
+                            placeholder="Add new notes about this article..."
+                            rows="4"
+                        ></textarea>
+                        <div class="notes-actions">
+                            <button id="save-note-btn" class="btn btn-primary">Add Note</button>
+                            <button id="clear-note-btn" class="btn btn-secondary">Clear All</button>
+                        </div>
+                        <div class="notes-status" id="notes-status"></div>
+                    </div>
+                </div>
+
+                <div class="article-actions">
+                    <a href="/articles" class="btn btn-secondary">Back to Articles</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 IndiVar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../utils/main.js"></script>
+</body>
+</html> 

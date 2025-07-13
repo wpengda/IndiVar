@@ -1,0 +1,682 @@
+/* Test Page Styles */
+
+/* Keep background but add solid backgrounds to key areas */
+.test-header {
+    background: #fff;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.test-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.test-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.test-description {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+}
+
+.test-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: #95a5a6;
+    margin: 1rem 0;
+}
+
+.page-header .test-meta {
+    margin: 1rem 0;
+}
+
+.test-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.page-header .page-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Progress Bar */
+.progress-container {
+    margin-bottom: 3rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: transparent;
+    width: 0%;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.progress-fill.has-progress {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+.progress-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* Test Content */
+.test-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.question-container {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(15px);
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.question-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+/* Likert Scale */
+.likert-scale {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.likert-option {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 2rem;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    min-height: 60px;
+    user-select: none;
+}
+
+.likert-option:hover {
+    background: #e3f2fd;
+    border-color: #2196f3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
+}
+
+.likert-option.selected {
+    background: #e3f2fd;
+    border-color: #2196f3;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+}
+
+.likert-option input[type="radio"] {
+    margin-right: 1rem;
+    transform: scale(1.4);
+    accent-color: #2196f3;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.likert-option label {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Test Navigation */
+.test-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.test-navigation .btn {
+    min-width: 120px;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.test-navigation .btn-primary {
+    background: rgba(33, 150, 243, 0.95) !important;
+}
+
+.test-navigation .btn-secondary {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #6c757d !important;
+    border: 1px solid rgba(108, 117, 125, 0.3) !important;
+}
+
+/* Results Section */
+.test-results {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(224, 224, 224, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* Keep background visible but ensure readability */
+.results-shown .main {
+    background: none !important;
+    min-height: 100vh;
+    position: relative;
+    z-index: 5;
+}
+
+.results-shown .container {
+    background: none !important;
+    min-height: 100vh;
+    position: relative;
+    z-index: 6;
+}
+
+/* Remove overlay to allow background visibility */
+.results-shown::before {
+    display: none;
+}
+
+/* Allow natural background to show through */
+body.results-shown {
+    background: none !important;
+}
+
+/* Allow word cloud to show through with moderate opacity */
+.results-shown .word-cloud-bg {
+    opacity: 0.3 !important;
+    z-index: 1 !important;
+}
+
+.test-results h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.domain-result {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(248, 249, 250, 0.9) !important;
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    position: relative;
+    z-index: 10;
+}
+
+.domain-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.domain-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.domain-description {
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+.score-bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(236, 240, 241, 0.8) !important;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+.score-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e74c3c, #f39c12, #f1c40f, #2ecc71, #27ae60);
+    transition: width 0.6s ease;
+}
+
+/* MBTI specific styles */
+.mbti-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.choice-btn {
+    padding: 1.25rem 2rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5;
+    min-height: 60px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+}
+
+.choice-btn:hover {
+    border-color: #3b82f6;
+    background: #f8fafc;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.choice-btn.selected {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.mbti-type {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.type-code {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+}
+
+.type-name {
+    font-size: 1.5rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+/* Grit Scale specific styles */
+.grit-score {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.overall-score {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #059669;
+    margin-bottom: 0.5rem;
+}
+
+.score-label {
+    font-size: 1.2rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.interpretation {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f0fdf4;
+    border-radius: 8px;
+    border-left: 4px solid #059669;
+}
+
+.interpretation h3 {
+    margin-bottom: 1rem;
+    color: #059669;
+}
+
+.dichotomy-result {
+    margin-bottom: 1rem;
+}
+
+.dichotomy-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+.dichotomy-bar {
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dichotomy-fill {
+    height: 100%;
+    background: linear-gradient(to right, #3b82f6, #1d4ed8);
+    transition: width 0.5s ease;
+}
+
+.dichotomy-description {
+    margin-top: 0.5rem;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.type-description {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+}
+
+.type-description h3 {
+    margin-bottom: 1rem;
+    color: #1e40af;
+}
+
+/* Enneagram specific styles */
+.enneagram-type {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.type-number {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #dc2626;
+    margin-bottom: 0.5rem;
+}
+
+.type-name {
+    font-size: 1.5rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.results-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Results Section Enhancements */
+.chart-container {
+    max-width: 600px;
+    height: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.chart-container canvas {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.domain-scores-section,
+.facet-scores-section {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.domain-scores-section h3,
+.facet-scores-section h3 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.facet-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.facet-group {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border-left: 4px solid #007bff;
+}
+
+.facet-group h4 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.facet-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.facet-item:last-child {
+    border-bottom: none;
+}
+
+.facet-name {
+    font-weight: 500;
+    color: #495057;
+}
+
+.facet-score {
+    font-weight: 600;
+    color: #007bff;
+    font-size: 1.1rem;
+}
+
+.domain-result {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+}
+
+.domain-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.domain-score {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 0.75rem;
+}
+
+.score-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.score-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #28a745, #ffc107, #dc3545);
+    border-radius: 4px;
+    transition: width 0.8s ease;
+}
+
+.domain-description {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .test-header {
+        padding: 1.5rem 0;
+    }
+    
+    .test-title {
+        font-size: 2rem;
+    }
+    
+    .test-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .question-container {
+        padding: 2rem 1.5rem;
+        min-height: 250px;
+    }
+    
+    .question-text {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+    
+        .likert-option {
+        padding: 1rem 1.5rem;
+        min-height: 55px;
+    }
+
+    .likert-option label {
+        font-size: 0.9rem;
+    }
+
+    .likert-option input[type="radio"] {
+        transform: scale(1.3);
+        width: 18px;
+        height: 18px;
+    }
+    
+    .test-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .test-navigation .btn {
+        width: 100%;
+    }
+    
+    .results-actions {
+        flex-direction: column;
+    }
+    
+    .results-actions .btn {
+        width: 100%;
+    }
+    
+    .test-actions {
+        margin-top: 1.5rem;
+        flex-direction: column;
+    }
+    
+    .test-actions .btn {
+        width: 100%;
+    }
+    
+    .page-header .page-actions {
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+    
+    .page-header .page-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .question-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .question-text {
+        font-size: 1.1rem;
+    }
+    
+    .likert-option {
+        padding: 1rem 1.25rem;
+        min-height: 50px;
+    }
+    
+    .likert-option label {
+        font-size: 0.85rem;
+    }
+
+    .likert-option input[type="radio"] {
+        transform: scale(1.2);
+        width: 16px;
+        height: 16px;
+    }
+
+    .choice-btn {
+        padding: 1rem 1.5rem;
+        min-height: 50px;
+    }
+} 

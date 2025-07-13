@@ -1,0 +1,422 @@
+[
+  {
+    "item_number": 1,
+    "item_text": "Is outgoing, sociable.",
+    "domain": "Extraversion",
+    "facet": "Sociability",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 2,
+    "item_text": "Is compassionate, has a soft heart.",
+    "domain": "Agreeableness",
+    "facet": "Compassion",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 3,
+    "item_text": "Tends to be disorganized.",
+    "domain": "Conscientiousness",
+    "facet": "Organization",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 4,
+    "item_text": "Is relaxed, handles stress well.",
+    "domain": "Negative Emotionality",
+    "facet": "Anxiety",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 5,
+    "item_text": "Has few artistic interests.",
+    "domain": "Open-Mindedness",
+    "facet": "Aesthetic Sensitivity",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 6,
+    "item_text": "Has an assertive personality.",
+    "domain": "Extraversion",
+    "facet": "Assertiveness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 7,
+    "item_text": "Is respectful, treats others with respect.",
+    "domain": "Agreeableness",
+    "facet": "Respectfulness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 8,
+    "item_text": "Tends to be lazy.",
+    "domain": "Conscientiousness",
+    "facet": "Productiveness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 9,
+    "item_text": "Stays optimistic after experiencing a setback.",
+    "domain": "Negative Emotionality",
+    "facet": "Depression",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 10,
+    "item_text": "Is curious about many different things.",
+    "domain": "Open-Mindedness",
+    "facet": "Intellectual Curiosity",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 11,
+    "item_text": "Rarely feels excited or eager.",
+    "domain": "Extraversion",
+    "facet": "Energy Level",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 12,
+    "item_text": "Tends to find fault with others.",
+    "domain": "Agreeableness",
+    "facet": "Trust",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 13,
+    "item_text": "Is dependable, steady.",
+    "domain": "Conscientiousness",
+    "facet": "Responsibility",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 14,
+    "item_text": "Is moody, has up and down mood swings.",
+    "domain": "Negative Emotionality",
+    "facet": "Emotional Volatility",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 15,
+    "item_text": "Is inventive, finds clever ways to do things.",
+    "domain": "Open-Mindedness",
+    "facet": "Creative Imagination",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 16,
+    "item_text": "Tends to be quiet.",
+    "domain": "Extraversion",
+    "facet": "Sociability",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 17,
+    "item_text": "Feels little sympathy for others.",
+    "domain": "Agreeableness",
+    "facet": "Compassion",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 18,
+    "item_text": "Is systematic, likes to keep things in order.",
+    "domain": "Conscientiousness",
+    "facet": "Organization",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 19,
+    "item_text": "Can be tense.",
+    "domain": "Negative Emotionality",
+    "facet": "Anxiety",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 20,
+    "item_text": "Is fascinated by art, music, or literature.",
+    "domain": "Open-Mindedness",
+    "facet": "Aesthetic Sensitivity",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 21,
+    "item_text": "Is dominant, acts as a leader.",
+    "domain": "Extraversion",
+    "facet": "Assertiveness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 22,
+    "item_text": "Starts arguments with others.",
+    "domain": "Agreeableness",
+    "facet": "Respectfulness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 23,
+    "item_text": "Has difficulty getting started on tasks.",
+    "domain": "Conscientiousness",
+    "facet": "Productiveness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 24,
+    "item_text": "Feels secure, comfortable with self.",
+    "domain": "Negative Emotionality",
+    "facet": "Depression",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 25,
+    "item_text": "Avoids intellectual, philosophical discussions.",
+    "domain": "Open-Mindedness",
+    "facet": "Intellectual Curiosity",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 26,
+    "item_text": "Is less active than other people.",
+    "domain": "Extraversion",
+    "facet": "Energy Level",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 27,
+    "item_text": "Has a forgiving nature.",
+    "domain": "Agreeableness",
+    "facet": "Trust",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 28,
+    "item_text": "Can be somewhat careless.",
+    "domain": "Conscientiousness",
+    "facet": "Responsibility",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 29,
+    "item_text": "Is emotionally stable, not easily upset.",
+    "domain": "Negative Emotionality",
+    "facet": "Emotional Volatility",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 30,
+    "item_text": "Has little creativity.",
+    "domain": "Open-Mindedness",
+    "facet": "Creative Imagination",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 31,
+    "item_text": "Is sometimes shy, introverted.",
+    "domain": "Extraversion",
+    "facet": "Sociability",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 32,
+    "item_text": "Is helpful and unselfish with others.",
+    "domain": "Agreeableness",
+    "facet": "Compassion",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 33,
+    "item_text": "Keeps things neat and tidy.",
+    "domain": "Conscientiousness",
+    "facet": "Organization",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 34,
+    "item_text": "Worries a lot.",
+    "domain": "Negative Emotionality",
+    "facet": "Anxiety",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 35,
+    "item_text": "Values art and beauty.",
+    "domain": "Open-Mindedness",
+    "facet": "Aesthetic Sensitivity",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 36,
+    "item_text": "Finds it hard to influence people.",
+    "domain": "Extraversion",
+    "facet": "Assertiveness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 37,
+    "item_text": "Is sometimes rude to others.",
+    "domain": "Agreeableness",
+    "facet": "Respectfulness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 38,
+    "item_text": "Is efficient, gets things done.",
+    "domain": "Conscientiousness",
+    "facet": "Productiveness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 39,
+    "item_text": "Often feels sad.",
+    "domain": "Negative Emotionality",
+    "facet": "Depression",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 40,
+    "item_text": "Is complex, a deep thinker.",
+    "domain": "Open-Mindedness",
+    "facet": "Intellectual Curiosity",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 41,
+    "item_text": "Is full of energy.",
+    "domain": "Extraversion",
+    "facet": "Energy Level",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 42,
+    "item_text": "Is suspicious of others\u2019 intentions.",
+    "domain": "Agreeableness",
+    "facet": "Trust",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 43,
+    "item_text": "Is reliable, can always be counted on.",
+    "domain": "Conscientiousness",
+    "facet": "Responsibility",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 44,
+    "item_text": "Keeps their emotions under control.",
+    "domain": "Negative Emotionality",
+    "facet": "Emotional Volatility",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 45,
+    "item_text": "Has difficulty imagining things.",
+    "domain": "Open-Mindedness",
+    "facet": "Creative Imagination",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 46,
+    "item_text": "Is talkative.",
+    "domain": "Extraversion",
+    "facet": "Sociability",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 47,
+    "item_text": "Can be cold and uncaring.",
+    "domain": "Agreeableness",
+    "facet": "Compassion",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 48,
+    "item_text": "Leaves a mess, doesn\u2019t clean up.",
+    "domain": "Conscientiousness",
+    "facet": "Organization",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 49,
+    "item_text": "Rarely feels anxious or afraid.",
+    "domain": "Negative Emotionality",
+    "facet": "Anxiety",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 50,
+    "item_text": "Thinks poetry and plays are boring.",
+    "domain": "Open-Mindedness",
+    "facet": "Aesthetic Sensitivity",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 51,
+    "item_text": "Prefers to have others take charge.",
+    "domain": "Extraversion",
+    "facet": "Assertiveness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 52,
+    "item_text": "Is polite, courteous to others.",
+    "domain": "Agreeableness",
+    "facet": "Respectfulness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 53,
+    "item_text": "Is persistent, works until the task is finished.",
+    "domain": "Conscientiousness",
+    "facet": "Productiveness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 54,
+    "item_text": "Tends to feel depressed, blue.",
+    "domain": "Negative Emotionality",
+    "facet": "Depression",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 55,
+    "item_text": "Has little interest in abstract ideas.",
+    "domain": "Open-Mindedness",
+    "facet": "Intellectual Curiosity",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 56,
+    "item_text": "Shows a lot of enthusiasm.",
+    "domain": "Extraversion",
+    "facet": "Energy Level",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 57,
+    "item_text": "Assumes the best about people.",
+    "domain": "Agreeableness",
+    "facet": "Trust",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 58,
+    "item_text": "Sometimes behaves irresponsibly.",
+    "domain": "Conscientiousness",
+    "facet": "Responsibility",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 59,
+    "item_text": "Is temperamental, gets emotional easily.",
+    "domain": "Negative Emotionality",
+    "facet": "Emotional Volatility",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 60,
+    "item_text": "Is original, comes up with new ideas.",
+    "domain": "Open-Mindedness",
+    "facet": "Creative Imagination",
+    "reverse_scored": false
+  }
+]

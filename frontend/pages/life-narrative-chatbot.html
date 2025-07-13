@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Narrative Chatbot Assessment - IndiVar</title>
+    
+    <!-- Cache Control Meta Tags -->
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/life-narrative-chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- WaveSurfer.js -->
+    <script src="https://cdn.jsdelivr.net/npm/wavesurfer.js@7.8.6/dist/wavesurfer.min.js"></script>
+    <script>
+        // Debug WaveSurfer loading
+        window.addEventListener('load', function() {
+            if (typeof WaveSurfer !== 'undefined') {
+                console.log('WaveSurfer loaded successfully:', WaveSurfer);
+                window.WaveSurferLoaded = true;
+            } else {
+                console.error('WaveSurfer failed to load');
+                window.WaveSurferLoaded = false;
+            }
+        });
+    </script>
+    
+    <!-- Prevent FOUC by initially hiding interactive content -->
+    <style>
+        .auth-protected-content {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .auth-protected-content.auth-ready {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .content-loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        /* Hide auth UI until JavaScript determines correct state */
+        .auth-ui-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .auth-ui-ready {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="/" class="logo-link">IndiVar</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/articles" class="nav-link">Articles</a></li>
+                    <li><a href="/tests" class="nav-link">Tests</a></li>
+                    <li><a href="/chatbots" class="nav-link">Chatbots</a></li>
+                    <li class="user-menu auth-ui-hidden" id="user-menu" style="display: none;">
+                        <span class="username" id="username-display"></span>
+                        <button class="logout-btn" id="logout-btn">Logout</button>
+                    </li>
+                    <li class="auth-buttons auth-ui-hidden">
+                        <a href="#" class="btn btn-primary" id="login-link">Login</a>
+                        <a href="#" class="btn btn-secondary" id="register-link">Register</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Content Loading State -->
+            <div class="content-loading" id="content-loading">
+                <div>
+                    <div class="spinner" style="margin: 0 auto 1rem; width: 24px; height: 24px;"></div>
+                    <p>Page loading...</p>
+                </div>
+            </div>
+            
+            <!-- Page Header -->
+            <section class="page-header auth-protected-content">
+                <h1 class="page-title">Life Narrative Chatbot Assessment</h1>
+                <p class="page-subtitle">Explore your personality through storytelling</p>
+            </section>
+        </div>
+
+        <!-- Main Container - Single Column Layout -->
+        <div class="app-container auth-protected-content" id="app-container">
+            <!-- Chat Interface -->
+            <div class="chat-section">
+                
+                <!-- Conversation Display -->
+                <div class="conversation-container" id="conversation-container">
+                    <div class="conversation-messages" id="conversation-messages">
+                        <!-- Messages will appear here -->
+                    </div>
+                </div>
+                
+                <!-- Input Section -->
+                <div class="input-section">
+                    <!-- Progress Section - moved right above input -->
+                    <div class="progress-section">
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <div class="progress-text">
+                                <span id="current-question">0</span> of <span id="total-questions">32</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="input-form" id="input-form">
+                        <div class="textarea-container">
+                            <textarea 
+                                id="message-input" 
+                                class="message-textarea"
+                                placeholder="Type your response here..."
+                                rows="3"
+                            ></textarea>
+                        </div>
+                        <div class="button-container">
+                            <button type="submit" class="send-button" id="send-button">
+                                <span class="button-text">Send</span>
+                            </button>
+                            <button type="button" class="voice-button" id="voice-button">
+                                <span class="button-text">Voice</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Personality Analysis Panel (initially hidden) -->
+        <div class="personality-panel" id="personality-panel" style="display: none;">
+            <div class="personality-header">
+                <h2>Your Personality Analysis</h2>
+                <div class="analysis-status" id="analysis-status">
+                    <div class="status-indicator"></div>
+                    <span class="status-text">Analysis Complete</span>
+                </div>
+            </div>
+            <div class="personality-content" id="personality-content">
+                <!-- Personality analysis will be populated here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Voice Recording Modal -->
+    <div class="voice-modal" id="voice-modal" style="display: none;">
+        <div class="voice-modal-overlay" id="voice-modal-overlay"></div>
+        <div class="voice-modal-content">
+            <div class="voice-modal-header">
+                <h3>Voice Recording</h3>
+                <button class="close-button" id="close-voice-modal">&times;</button>
+            </div>
+            <div class="voice-modal-body">
+                <div class="recording-timer" id="recording-timer">00:00</div>
+                <div class="waveform-container" id="waveform-container">
+                    <canvas class="waveform-canvas" id="waveform-canvas" style="display: block;"></canvas>
+                    <div class="wavesurfer-container" id="wavesurfer-container" style="display: none;"></div>
+                </div>
+                <div class="recording-controls">
+                    <button class="record-button" id="record-button">
+                        <span class="button-text">Start Recording</span>
+                    </button>
+                    <button class="pause-button" id="pause-button" style="display: none;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                        </svg>
+                        <span class="button-text">Pause</span>
+                    </button>
+                    <button class="resume-button" id="resume-button" style="display: none;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <span class="button-text">Resume</span>
+                    </button>
+                    <button class="stop-button" id="stop-button" style="display: none;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 6h12v12H6z"/>
+                        </svg>
+                        <span class="button-text">Stop Recording</span>
+                    </button>
+                </div>
+                <div class="playback-controls" id="playback-controls" style="display: none;">
+                    <button class="play-pause-button" id="play-pause-button">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <span class="button-text">Play</span>
+                    </button>
+                    <button class="restart-button" id="restart-button">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4 12a8 8 0 018-8V2.5L14.5 5 12 7.5V6a6 6 0 100 12 6 6 0 006-6h2a8 8 0 01-16 0z"/>
+                        </svg>
+                        <span class="button-text">Restart</span>
+                    </button>
+                </div>
+                <div class="transcript-section" id="transcript-section">
+                    <div class="transcript-header">
+                        <label for="transcript-textarea" class="transcript-label">Transcript:</label>
+                        <div class="recording-status" id="recording-status">
+                            <div class="status-indicator" id="status-indicator"></div>
+                            <span class="status-text" id="status-text">Ready to record</span>
+                        </div>
+                    </div>
+                    <textarea id="transcript-textarea" class="transcript-textarea" placeholder="Transcript will appear here after recording..."></textarea>
+                </div>
+            </div>
+            <div class="voice-modal-footer">
+                <button class="record-again-button" id="record-again-button" style="display: none;">
+                    <span class="button-text">Record Again</span>
+                </button>
+                <button class="submit-button" id="submit-voice-button" style="display: none;">Submit Response</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 IndiVar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../utils/api.js"></script>
+    <script src="../utils/TypewriterText.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.umd.min.js"></script>
+    <script src="../utils/VoiceRecordingModal.js"></script>
+    <script type="module">
+        // Import auth module and make getCurrentUser available globally
+        import { getCurrentUser } from '../utils/auth.js';
+        window.getCurrentUser = getCurrentUser;
+    </script>
+    <script src="../utils/lifeNarrativeChatbot.js"></script>
+    <script type="module" src="../utils/main.js"></script>
+</body>
+</html> 

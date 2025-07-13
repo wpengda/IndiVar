@@ -1,0 +1,21 @@
+# Whisper dependencies
+git+https://github.com/openai/whisper.git
+torch
+torchaudio
+numpy
+ffmpeg-python
+
+# Additional dependencies for audio processing
+librosa
+soundfile
+
+# AI/LLM dependencies for conversation system
+openai
+python-dotenv
+pandas
+openpyxl
+requests
+
+# Additional packages that might be needed
+anthropic
+google-generativeai 

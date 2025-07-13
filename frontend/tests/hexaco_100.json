@@ -1,0 +1,702 @@
+[
+  {
+    "item_number": 1,
+    "item_text": "I would be quite bored by a visit to an art gallery.",
+    "domain": "Openness to Experience",
+    "facet": "Aesthetic Appreciation",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 2,
+    "item_text": "I clean my office or home quite frequently.",
+    "domain": "Conscientiousness",
+    "facet": "Organization",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 3,
+    "item_text": "I rarely hold a grudge, even against people who have badly wronged me.",
+    "domain": "Agreeableness",
+    "facet": "Forgiveness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 4,
+    "item_text": "I feel reasonably satisfied with myself overall.",
+    "domain": "Extraversion",
+    "facet": "Social Self-Esteem",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 5,
+    "item_text": "I would feel afraid if I had to travel in bad weather conditions.",
+    "domain": "Emotionality",
+    "facet": "Fearfulness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 6,
+    "item_text": "If I want something from a person I dislike, I will act very nicely toward that person in order to get it.",
+    "domain": "Honesty-Humility",
+    "facet": "Sincerity",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 7,
+    "item_text": "I'm interested in learning about the history and politics of other countries.",
+    "domain": "Openness to Experience",
+    "facet": "Inquisitiveness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 8,
+    "item_text": "When working, I often set ambitious goals for myself.",
+    "domain": "Conscientiousness",
+    "facet": "Diligence",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 9,
+    "item_text": "People sometimes tell me that I am too critical of others.",
+    "domain": "Agreeableness",
+    "facet": "Gentleness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 10,
+    "item_text": "I rarely express my opinions in group meetings.",
+    "domain": "Extraversion",
+    "facet": "Social Boldness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 11,
+    "item_text": "I sometimes can't help worrying about little things.",
+    "domain": "Emotionality",
+    "facet": "Anxiety",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 12,
+    "item_text": "If I knew that I could never get caught, I would be willing to steal a million dollars.",
+    "domain": "Honesty-Humility",
+    "facet": "Fairness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 13,
+    "item_text": "I would like a job that requires following a routine rather than being creative.",
+    "domain": "Openness to Experience",
+    "facet": "Creativity",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 14,
+    "item_text": "I often check my work over repeatedly to find any mistakes.",
+    "domain": "Conscientiousness",
+    "facet": "Perfectionism",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 15,
+    "item_text": "People sometimes tell me that I'm too stubborn.",
+    "domain": "Agreeableness",
+    "facet": "Flexibility",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 16,
+    "item_text": "I avoid making \"small talk\" with people.",
+    "domain": "Extraversion",
+    "facet": "Sociability",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 17,
+    "item_text": "When I suffer from a painful experience, I need someone to make me feel comfortable.",
+    "domain": "Emotionality",
+    "facet": "Dependence",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 18,
+    "item_text": "Having a lot of money is not especially important to me.",
+    "domain": "Honesty-Humility",
+    "facet": "Greed-Avoidance",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 19,
+    "item_text": "I think that paying attention to radical ideas is a waste of time.",
+    "domain": "Openness to Experience",
+    "facet": "Unconventionality",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 20,
+    "item_text": "I make decisions based on the feeling of the moment rather than on careful thought.",
+    "domain": "Conscientiousness",
+    "facet": "Prudence",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 21,
+    "item_text": "People think of me as someone who has a quick temper.",
+    "domain": "Agreeableness",
+    "facet": "Patience",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 22,
+    "item_text": "I am energetic nearly all the time.",
+    "domain": "Extraversion",
+    "facet": "Liveliness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 23,
+    "item_text": "I feel like crying when I see other people crying.",
+    "domain": "Emotionality",
+    "facet": "Sentimentality",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 24,
+    "item_text": "I am an ordinary person who is no better than others.",
+    "domain": "Honesty-Humility",
+    "facet": "Modesty",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 25,
+    "item_text": "I wouldn't spend my time reading a book of poetry.",
+    "domain": "Openness to Experience",
+    "facet": "Aesthetic Appreciation",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 26,
+    "item_text": "I plan ahead and organize things, to avoid scrambling at the last minute.",
+    "domain": "Conscientiousness",
+    "facet": "Organization",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 27,
+    "item_text": "My attitude toward people who have treated me badly is \"forgive and forget\".",
+    "domain": "Agreeableness",
+    "facet": "Forgiveness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 28,
+    "item_text": "I think that most people like some aspects of my personality.",
+    "domain": "Extraversion",
+    "facet": "Social Self-Esteem",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 29,
+    "item_text": "I don\u2019t mind doing jobs that involve dangerous work.",
+    "domain": "Emotionality",
+    "facet": "Fearfulness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 30,
+    "item_text": "I wouldn't use flattery to get a raise or promotion at work, even if I thought it would succeed.",
+    "domain": "Honesty-Humility",
+    "facet": "Sincerity",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 31,
+    "item_text": "I enjoy looking at maps of different places.",
+    "domain": "Openness to Experience",
+    "facet": "Inquisitiveness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 32,
+    "item_text": "I often push myself very hard when trying to achieve a goal.",
+    "domain": "Conscientiousness",
+    "facet": "Diligence",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 33,
+    "item_text": "I generally accept people\u2019s faults without complaining about them.",
+    "domain": "Agreeableness",
+    "facet": "Gentleness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 34,
+    "item_text": "In social situations, I'm usually the one who makes the first move.",
+    "domain": "Extraversion",
+    "facet": "Social Boldness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 35,
+    "item_text": "I worry a lot less than most people do.",
+    "domain": "Emotionality",
+    "facet": "Anxiety",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 36,
+    "item_text": "I would be tempted to buy stolen property if I were financially tight.",
+    "domain": "Honesty-Humility",
+    "facet": "Fairness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 37,
+    "item_text": "I would enjoy creating a work of art, such as a novel, a song, or a painting.",
+    "domain": "Openness to Experience",
+    "facet": "Creativity",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 38,
+    "item_text": "When working on something, I don't pay much attention to small details.",
+    "domain": "Conscientiousness",
+    "facet": "Perfectionism",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 39,
+    "item_text": "I am usually quite flexible in my opinions when people disagree with me.",
+    "domain": "Agreeableness",
+    "facet": "Flexibility",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 40,
+    "item_text": "I enjoy having lots of people around to talk with.",
+    "domain": "Extraversion",
+    "facet": "Sociability",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 41,
+    "item_text": "I can handle difficult situations without needing emotional support from anyone else.",
+    "domain": "Emotionality",
+    "facet": "Dependence",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 42,
+    "item_text": "I would like to live in a very expensive, high-class neighborhood.",
+    "domain": "Honesty-Humility",
+    "facet": "Greed-Avoidance",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 43,
+    "item_text": "I like people who have unconventional views.",
+    "domain": "Openness to Experience",
+    "facet": "Unconventionality",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 44,
+    "item_text": "I make a lot of mistakes because I don't think before I act.",
+    "domain": "Conscientiousness",
+    "facet": "Prudence",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 45,
+    "item_text": "I rarely feel anger, even when people treat me quite badly.",
+    "domain": "Agreeableness",
+    "facet": "Patience",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 46,
+    "item_text": "On most days, I feel cheerful and optimistic.",
+    "domain": "Extraversion",
+    "facet": "Liveliness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 47,
+    "item_text": "When someone I know well is unhappy, I can almost feel that person's pain myself.",
+    "domain": "Emotionality",
+    "facet": "Sentimentality",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 48,
+    "item_text": "I wouldn\u2019t want people to treat me as though I were superior to them.",
+    "domain": "Honesty-Humility",
+    "facet": "Modesty",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 49,
+    "item_text": "If I had the opportunity, I would like to attend a classical music concert.",
+    "domain": "Openness to Experience",
+    "facet": "Aesthetic Appreciation",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 50,
+    "item_text": "People often joke with me about the messiness of my room or desk.",
+    "domain": "Conscientiousness",
+    "facet": "Organization",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 51,
+    "item_text": "If someone has cheated me once, I will always feel suspicious of that person.",
+    "domain": "Agreeableness",
+    "facet": "Forgiveness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 52,
+    "item_text": "I feel that I am an unpopular person.",
+    "domain": "Extraversion",
+    "facet": "Social Self-Esteem",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 53,
+    "item_text": "When it comes to physical danger, I am very fearful.",
+    "domain": "Emotionality",
+    "facet": "Fearfulness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 54,
+    "item_text": "If I want something from someone, I will laugh at that person's worst jokes.",
+    "domain": "Honesty-Humility",
+    "facet": "Sincerity",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 55,
+    "item_text": "I would be very bored by a book about the history of science and technology.",
+    "domain": "Openness to Experience",
+    "facet": "Inquisitiveness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 56,
+    "item_text": "Often when I set a goal, I end up quitting without having reached it.",
+    "domain": "Conscientiousness",
+    "facet": "Diligence",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 57,
+    "item_text": "I tend to be lenient in judging other people.",
+    "domain": "Agreeableness",
+    "facet": "Gentleness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 58,
+    "item_text": "When I'm in a group of people, I'm often the one who speaks on behalf of the group.",
+    "domain": "Extraversion",
+    "facet": "Social Boldness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 59,
+    "item_text": "I rarely, if ever, have trouble sleeping due to stress or anxiety.",
+    "domain": "Emotionality",
+    "facet": "Anxiety",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 60,
+    "item_text": "I would never accept a bribe, even if it were very large.",
+    "domain": "Honesty-Humility",
+    "facet": "Fairness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 61,
+    "item_text": "People have often told me that I have a good imagination.",
+    "domain": "Openness to Experience",
+    "facet": "Creativity",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 62,
+    "item_text": "I always try to be accurate in my work, even at the expense of time.",
+    "domain": "Conscientiousness",
+    "facet": "Perfectionism",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 63,
+    "item_text": "When people tell me that I\u2019m wrong, my first reaction is to argue with them.",
+    "domain": "Agreeableness",
+    "facet": "Flexibility",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 64,
+    "item_text": "I prefer jobs that involve active social interaction to those that involve working alone.",
+    "domain": "Extraversion",
+    "facet": "Sociability",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 65,
+    "item_text": "Whenever I feel worried about something, I want to share my concern with another person.",
+    "domain": "Emotionality",
+    "facet": "Dependence",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 66,
+    "item_text": "I would like to be seen driving around in a very expensive car.",
+    "domain": "Honesty-Humility",
+    "facet": "Greed-Avoidance",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 67,
+    "item_text": "I think of myself as a somewhat eccentric person.",
+    "domain": "Openness to Experience",
+    "facet": "Unconventionality",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 68,
+    "item_text": "I don\u2019t allow my impulses to govern my behavior.",
+    "domain": "Conscientiousness",
+    "facet": "Prudence",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 69,
+    "item_text": "Most people tend to get angry more quickly than I do.",
+    "domain": "Agreeableness",
+    "facet": "Patience",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 70,
+    "item_text": "People often tell me that I should try to cheer up.",
+    "domain": "Extraversion",
+    "facet": "Liveliness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 71,
+    "item_text": "I feel strong emotions when someone close to me is going away for a long time.",
+    "domain": "Emotionality",
+    "facet": "Sentimentality",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 72,
+    "item_text": "I think that I am entitled to more respect than the average person is.",
+    "domain": "Honesty-Humility",
+    "facet": "Modesty",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 73,
+    "item_text": "Sometimes I like to just watch the wind as it blows through the trees.",
+    "domain": "Openness to Experience",
+    "facet": "Aesthetic Appreciation",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 74,
+    "item_text": "When working, I sometimes have difficulties due to being disorganized.",
+    "domain": "Conscientiousness",
+    "facet": "Organization",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 75,
+    "item_text": "I find it hard to fully forgive someone who has done something mean to me.",
+    "domain": "Agreeableness",
+    "facet": "Forgiveness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 76,
+    "item_text": "I sometimes feel that I am a worthless person.",
+    "domain": "Extraversion",
+    "facet": "Social Self-Esteem",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 77,
+    "item_text": "Even in an emergency I wouldn't feel like panicking.",
+    "domain": "Emotionality",
+    "facet": "Fearfulness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 78,
+    "item_text": "I wouldn't pretend to like someone just to get that person to do favors for me.",
+    "domain": "Honesty-Humility",
+    "facet": "Sincerity",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 79,
+    "item_text": "I\u2019ve never really enjoyed looking through an encyclopedia.",
+    "domain": "Openness to Experience",
+    "facet": "Inquisitiveness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 80,
+    "item_text": "I do only the minimum amount of work needed to get by.",
+    "domain": "Conscientiousness",
+    "facet": "Diligence",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 81,
+    "item_text": "Even when people make a lot of mistakes, I rarely say anything negative.",
+    "domain": "Agreeableness",
+    "facet": "Gentleness",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 82,
+    "item_text": "I tend to feel quite self-conscious when speaking in front of a group of people.",
+    "domain": "Extraversion",
+    "facet": "Social Boldness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 83,
+    "item_text": "I get very anxious when waiting to hear about an important decision.",
+    "domain": "Emotionality",
+    "facet": "Anxiety",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 84,
+    "item_text": "I\u2019d be tempted to use counterfeit money, if I were sure I could get away with it.",
+    "domain": "Honesty-Humility",
+    "facet": "Fairness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 85,
+    "item_text": "I don't think of myself as the artistic or creative type.",
+    "domain": "Openness to Experience",
+    "facet": "Creativity",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 86,
+    "item_text": "People often call me a perfectionist.",
+    "domain": "Conscientiousness",
+    "facet": "Perfectionism",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 87,
+    "item_text": "I find it hard to compromise with people when I really think I\u2019m right.",
+    "domain": "Agreeableness",
+    "facet": "Flexibility",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 88,
+    "item_text": "The first thing that I always do in a new place is to make friends.",
+    "domain": "Extraversion",
+    "facet": "Sociability",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 89,
+    "item_text": "I rarely discuss my problems with other people.",
+    "domain": "Emotionality",
+    "facet": "Dependence",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 90,
+    "item_text": "I would get a lot of pleasure from owning expensive luxury goods.",
+    "domain": "Honesty-Humility",
+    "facet": "Greed-Avoidance",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 91,
+    "item_text": "I find it boring to discuss philosophy.",
+    "domain": "Openness to Experience",
+    "facet": "Unconventionality",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 92,
+    "item_text": "I prefer to do whatever comes to mind, rather than stick to a plan.",
+    "domain": "Conscientiousness",
+    "facet": "Prudence",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 93,
+    "item_text": "I find it hard to keep my temper when people insult me.",
+    "domain": "Agreeableness",
+    "facet": "Patience",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 94,
+    "item_text": "Most people are more upbeat and dynamic than I generally am.",
+    "domain": "Extraversion",
+    "facet": "Liveliness",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 95,
+    "item_text": "I remain unemotional even in situations where most people get very sentimental.",
+    "domain": "Emotionality",
+    "facet": "Sentimentality",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 96,
+    "item_text": "I want people to know that I am an important person of high status.",
+    "domain": "Honesty-Humility",
+    "facet": "Modesty",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 97,
+    "item_text": "I have sympathy for people who are less fortunate than I am.",
+    "domain": "Altruism (interstitial)",
+    "facet": "Altruism",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 98,
+    "item_text": "I try to give generously to those in need.",
+    "domain": "Altruism (interstitial)",
+    "facet": "Altruism",
+    "reverse_scored": false
+  },
+  {
+    "item_number": 99,
+    "item_text": "It wouldn\u2019t bother me to harm someone I didn\u2019t like.",
+    "domain": "Altruism (interstitial)",
+    "facet": "Altruism",
+    "reverse_scored": true
+  },
+  {
+    "item_number": 100,
+    "item_text": "People see me as a hard-hearted person.",
+    "domain": "Altruism (interstitial)",
+    "facet": "Altruism",
+    "reverse_scored": true
+  }
+]

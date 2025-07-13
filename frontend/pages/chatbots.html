@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbots - IndiVar</title>
+    
+    <!-- Cache Control Meta Tags -->
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Prevent FOUC by initially hiding interactive content -->
+    <style>
+        .auth-protected-content {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .auth-protected-content.auth-ready {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .content-loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        /* Hide auth UI until JavaScript determines correct state */
+        .auth-ui-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .auth-ui-ready {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="/" class="logo-link">IndiVar</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/articles" class="nav-link">Articles</a></li>
+                    <li><a href="/tests" class="nav-link">Tests</a></li>
+                    <li><a href="/chatbots" class="nav-link active">Chatbots</a></li>
+                    <li class="user-menu auth-ui-hidden" id="user-menu" style="display: none;">
+                        <span class="username" id="username-display"></span>
+                        <button class="logout-btn" id="logout-btn">Logout</button>
+                    </li>
+                    <li class="auth-buttons auth-ui-hidden">
+                        <a href="#" class="btn btn-primary" id="login-link">Login</a>
+                        <a href="#" class="btn btn-secondary" id="register-link">Register</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Content Loading State -->
+            <div class="content-loading" id="content-loading">
+                <div>
+                    <div class="spinner" style="margin: 0 auto 1rem; width: 24px; height: 24px;"></div>
+                    <p>Page loading...</p>
+                </div>
+            </div>
+
+            <section class="page-header auth-protected-content">
+                <h1 class="page-title">AI Personality Chatbots</h1>
+                <p class="page-subtitle">Interact with intelligent chatbots designed to help you explore personality science and individual differences.</p>
+            </section>
+
+            <section class="chatbot-showcase auth-protected-content">
+                <div class="chatbot-hero">
+                    <div class="chatbot-hero-content">
+                        <h2>Experience the Future of Personality Assessment</h2>
+                        <p>Try AI-powered chatbots combine cutting-edge technology with psychological science to provide personalized insights and guidance.</p>
+                        <div class="chatbot-features">
+                            <div class="feature">
+                                <span class="feature-icon">🤖</span>
+                                <span>AI-Powered</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">🎯</span>
+                                <span>Personalized</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">🔬</span>
+                                <span>Research-Based</span>
+                            </div>
+                            <div class="feature">
+                                <span class="feature-icon">💬</span>
+                                <span>Interactive</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatbot-hero-image">
+                        <div class="chatbot-demo">
+                            <div class="chat-messages">
+                                <div class="message bot-message">
+                                    <div class="message-avatar">🤖</div>
+                                    <div class="message-content">
+                                        Let's start by getting to know each other a bit! I am an AI interviewer, and my specialty is to getto know you via our chat. 
+
+                                    </div>
+                                </div>
+                                <div class="message user-message">
+                                    <div class="message-content">
+                                        Nice to meet you! My name is IndiVar, and I'm looking forward to our conversation. 
+                                    </div>
+                                </div>
+                                <div class="message bot-message">
+                                    <div class="message-avatar">🤖</div>
+                                    <div class="message-content">
+                                        Now could you tell me about yourself in 2 to 3 sentences? Since I was born and live in a box 24x7, I am curious to know where you are from and what your life is like?
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chatbot-grid auth-protected-content">
+                <div class="chatbot-category">
+                    <h2 class="chatbot-category-title">Chatbot Assessment</h2>
+                    <div class="chatbot-cards">
+                        <div class="chatbot-card">
+                            <div class="chatbot-icon">📖</div>
+                            <h3>Life-narrative-based Chatbot Assessment</h3>
+                            <p>Discover your personality through storytelling and life narrative exploration. Share your experiences and let our AI guide you through a personalized assessment journey.</p>
+                            <div class="chatbot-capabilities">
+                                <span class="capability">Life story analysis</span>
+                                <span class="capability">Narrative assessment</span>
+                                <span class="capability">Personal insights</span>
+                            </div>
+                            <a href="/life-narrative-chatbot" class="btn btn-primary btn-large chatbot-start-btn">Start Chat</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chatbot-cta auth-protected-content">
+                <div class="cta-container">
+                    <h2>Ready to Explore Your Personality?</h2>
+                    <p>Start a conversation with our AI chatbots and discover insights about yourself and others.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-secondary btn-large" id="cta-register-btn">Create Account</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 IndiVar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../utils/main.js"></script>
+</body>
+</html> 

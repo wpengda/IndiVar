@@ -1,0 +1,43 @@
+{
+  "name": "indivar",
+  "version": "1.0.0",
+  "description": "A modern, full-stack individual difference research platform built with Node.js, Express, SQLite, and vanilla JavaScript",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev",
+    "install-backend": "cd backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "build": "echo 'No build step required for vanilla JS'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "personality",
+    "individual-differences",
+    "psychology",
+    "research",
+    "testing",
+    "full-stack",
+    "nodejs",
+    "express",
+    "sqlite"
+  ],
+  "author": "IndiVar Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indivar/indivar.git"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "@types/node": "^24.0.12",
+    "@types/react": "^19.1.8",
+    "react": "^19.1.0",
+    "typescript": "^5.8.3",
+    "wavesurfer.js": "^7.9.9"
+  }
+}

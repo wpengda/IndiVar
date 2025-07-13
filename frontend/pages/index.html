@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiVar - Individual Difference Research Platform</title>
+    
+    <!-- Cache Control Meta Tags -->
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Prevent FOUC by initially hiding interactive content -->
+    <style>
+        .auth-protected-content {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .auth-protected-content.auth-ready {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .content-loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        /* Hide auth UI until JavaScript determines correct state */
+        .auth-ui-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .auth-ui-ready {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="word-cloud-bg" id="word-cloud-bg"></div>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="/" class="logo-link">IndiVar</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link active">Home</a></li>
+                    <li><a href="/articles" class="nav-link">Articles</a></li>
+                    <li><a href="/tests" class="nav-link">Tests</a></li>
+                    <li><a href="/chatbots" class="nav-link">Chatbots</a></li>
+                    <li class="user-menu auth-ui-hidden" id="user-menu" style="display: none;">
+                        <span class="username" id="username-display"></span>
+                        <button class="logout-btn" id="logout-btn">Logout</button>
+                    </li>
+                    <li class="auth-buttons auth-ui-hidden">
+                        <a href="#" class="btn btn-primary" id="login-link">Login</a>
+                        <a href="#" class="btn btn-secondary" id="register-link">Register</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Content Loading State -->
+            <div class="content-loading" id="content-loading">
+                <div>
+                    <div class="spinner" style="margin: 0 auto 1rem; width: 24px; height: 24px;"></div>
+                    <p>Page loading...</p>
+                </div>
+            </div>
+            
+            <section class="hero auth-protected-content">
+                                    <div class="hero-content">
+                        <h1 class="hero-title">Get to know individual difference research and test yourself! :)</h1>
+                        <p class="hero-subtitle">Explore personality science, take validated assessments, and interact with AI-powered personality chatbots.</p>
+                    </div>
+            </section>
+            
+            <section class="categories auth-protected-content">
+                <div class="categories-container">
+                    <h2 class="categories-title">Explore Our Platform</h2>
+                    <div class="category-grid">
+                        <a href="/articles" class="category-card">
+                            <div class="category-icon">📚</div>
+                            <h3>Articles</h3>
+                            <p>Dive deep into personality science with curated list of articles. Mark the articles you have read and write your summaries.</p>
+                            <div class="category-features">
+                                <span class="feature-tag">Curated Articles</span>
+                                <span class="feature-tag">Track Progress</span>
+                                <span class="feature-tag">Save Your Thoughts</span>
+                            </div>
+                        </a>
+                        <a href="/tests" class="category-card">
+                            <div class="category-icon">🧪</div>
+                            <h3>Tests</h3>
+                            <p>Take validated personality assessments and psychological tests to understand your individual differences and traits.</p>
+                            <div class="category-features">
+                                <span class="feature-tag">Big Five</span>
+                                <span class="feature-tag">HEXACO</span>
+                                <span class="feature-tag">Likert Scale</span>
+                                <span class="feature-tag">Forced-Choice</span>
+                            </div>
+                        </a>
+                        <a href="/chatbots" class="category-card">
+                            <div class="category-icon">🤖</div>
+                            <h3>Chatbots</h3>
+                            <p>Interact with AI-powered personality chatbots for personalized insights, guidance, and exploration of individual differences.</p>
+                            <div class="category-features">
+                                <span class="feature-tag">AI Guidance</span>
+                                <span class="feature-tag">Interactive</span>
+                                <span class="feature-tag">Real Time</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chatbot-cta auth-protected-content">
+                <div class="cta-container">
+                    <h2>Ready to Explore Your Personality?</h2>
+                    <p>Start your journey with personality assessments and AI-powered insights.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-secondary btn-large" id="cta-register-btn">Create Account</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 IndiVar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../utils/main.js"></script>
+</body>
+</html> 

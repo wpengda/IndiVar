@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Five Inventory-2 (BFI-2) - IndiVar</title>
+    
+    <!-- Cache Control Meta Tags -->
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/test.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Prevent FOUC by initially hiding interactive content -->
+    <style>
+        .auth-protected-content {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .auth-protected-content.auth-ready {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .content-loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        /* Hide auth UI until JavaScript determines correct state */
+        .auth-ui-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+        .auth-ui-ready {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="/" class="logo-link">IndiVar</a></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/articles" class="nav-link">Articles</a></li>
+                    <li><a href="/tests" class="nav-link active">Tests</a></li>
+                    <li><a href="/chatbots" class="nav-link">Chatbots</a></li>
+                    <li class="user-menu auth-ui-hidden" id="user-menu" style="display: none;">
+                        <span class="username" id="username-display"></span>
+                        <button class="logout-btn" id="logout-btn">Logout</button>
+                    </li>
+                    <li class="auth-buttons auth-ui-hidden">
+                        <a href="#" class="btn btn-primary" id="login-link">Login</a>
+                        <a href="#" class="btn btn-secondary" id="register-link">Register</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Content Loading State -->
+            <div class="content-loading" id="content-loading">
+                <div>
+                    <div class="spinner" style="margin: 0 auto 1rem; width: 24px; height: 24px;"></div>
+                    <p>Page loading...</p>
+                </div>
+            </div>
+            
+            <!-- Page Header -->
+            <section class="page-header auth-protected-content">
+                <h1 class="page-title">Big Five Inventory-2 (BFI-2)</h1>
+                <p class="page-subtitle">A comprehensive assessment of the five major personality dimensions: Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.</p>
+                <div class="test-meta">
+                    <span class="test-duration">10-15 minutes</span>
+                    <span class="test-items" id="test-items-count">60 items</span>
+                </div>
+                <div class="page-actions">
+                    <a href="/test-history?filter=bfi2-test" class="btn btn-outline-primary">
+                        📊 View Previous Results
+                    </a>
+                </div>
+            </section>
+
+            <!-- Progress Bar -->
+            <div class="progress-container auth-protected-content">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text">
+                    <span id="current-question">1</span> of <span id="total-questions">60</span>
+                </div>
+            </div>
+
+            <!-- Test Content -->
+            <div class="test-content auth-protected-content" id="test-content">
+                <div class="question-container" id="question-container">
+                    <!-- Questions will be loaded here -->
+                </div>
+
+                <div class="test-navigation">
+                    <button class="btn btn-secondary" id="prev-btn" disabled>Previous</button>
+                    <button class="btn btn-primary" id="next-btn" disabled>Next</button>
+                    <button class="btn btn-primary" id="submit-btn" style="display: none;">Submit Test</button>
+                </div>
+            </div>
+
+            <!-- Results Section (hidden initially) -->
+            <div class="test-results auth-protected-content" id="test-results" style="display: none;">
+                <h2>Your BFI-2 Results</h2>
+                
+                <!-- Radar Chart Section -->
+                <div class="chart-container">
+                    <canvas id="radarChart"></canvas>
+                </div>
+                
+                <!-- Domain Scores -->
+                <div class="domain-scores-section">
+                    <h3>Domain Scores</h3>
+                    <div class="results-content" id="results-content">
+                        <!-- Domain results will be displayed here -->
+                    </div>
+                </div>
+                
+                <!-- Facet Scores -->
+                <div class="facet-scores-section">
+                    <h3>Facet Scores</h3>
+                    <div class="facet-results" id="facet-results">
+                        <!-- Facet results will be displayed here -->
+                    </div>
+                </div>
+                
+                <div class="results-actions">
+                    <button class="btn btn-primary" id="download-results">Download Results</button>
+                    <a href="/test-history?filter=bfi2-test" class="btn btn-outline-primary">View All Results</a>
+                    <a href="/tests" class="btn btn-secondary">Back to Tests</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 IndiVar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../../utils/main.js"></script>
+    <script type="module" src="../../utils/bfi2-test.js"></script>
+</body>
+</html> 
